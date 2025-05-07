@@ -1,0 +1,40 @@
+# Build Folders
+bin/
+obj/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.vspx
+*.vcxproj.*
+*.h
+*.log
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# EXE and other generated binaries
+*.exe
+*.dll
+*.pdb
+# Build artifacts
+*.cache
+
+# IDE folders
+
+
+# NuGet
+*.nupkg
+*.nuget
+/web/test

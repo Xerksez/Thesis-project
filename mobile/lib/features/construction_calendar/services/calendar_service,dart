@@ -1,0 +1,38 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+import '../models/task_model.dart';
+
+class CalendarService {
+  static const String _baseUrl = "http://10.0.2.2:5007/api";
+
+  /// Fetches tasks with token authentication
+  static Future<List<TaskModel>> fetchTasks() async {
+    final String? token = await _getToken();
+
+    if (token == null) {
+      throw Exception("No token found. User might need to log in.");
+    }
+
+    final response = await http.get(
+      Uri.parse('$_baseUrl/tasks'),
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
+    );
+
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((task) => TaskModel.fromJson(task)).toList();
+    } else {
+      throw Exception('Failed to fetch tasks');
+    }
+  }
+
+  /// Retrieves the token from SharedPreferences
+  static Future<String?> _getToken() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString('auth_token');
+  }
+}

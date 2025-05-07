@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWSSDK.Translate" Version="3.7.400.71" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.11" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Properties\launchSettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BuildBuddy.Application.Abstractions\BuildBuddy.Application.Abstractions.csproj" />
+      <ProjectReference Include="..\BuildBuddy.Data.Repositories\BuildBuddy.Data.Repositories.csproj" />
+      <ProjectReference Include="..\BuildBuddy.Storage.Repository\BuildBuddy.Storage.Repository.csproj" />
+    </ItemGroup>
+
+</Project>

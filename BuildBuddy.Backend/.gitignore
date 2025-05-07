@@ -1,0 +1,112 @@
+# DotNet specific
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.dbmdl
+*.bak
+*.backup
+*.log
+
+# Visual Studio Code specific
+.vscode/
+.history/
+*.code-workspace
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ASP.NET specific
+secrets.json
+.env
+.env.*
+
+# Entity Framework
+Migrations/
+*.db
+
+# Logs
+logs/
+*.log
+*.nlog
+*.tlog
+
+# Testing
+TestResults/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+*.lcov
+
+# Dependency directories
+node_modules/
+bower_components/
+packages/
+
+# Build artefacts
+*.dll
+*.exe
+*.app
+*.so
+*.pdb
+*.class
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+
+# Yarn / npm
+yarn.lock
+package-lock.json
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+Dockerfile
+
+# IDE
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln*
+
+# Miscellaneous
+*.bak
+*.swp
+*~
+*.tmp
+*.cache
+*.pid
+*.tar.gz
+*.zip
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.nfs*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# JetBrains Rider
+.idea/
+*.iml
+
+# Azure
+.vscode/
+azure-pipelines.yml
